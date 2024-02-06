@@ -120,10 +120,11 @@ app.use(cors());
 
 
 const categories = require("./data/categories.json");
+const news = require("./data/news.json");
 
 
 app.get("/", (req, res) => {
-    res.send("Dragon News 4 is Running");
+    res.send("Dragon News 5 is Running");
 });
 
 
@@ -131,7 +132,11 @@ app.get("/categories", (req, res) => {
     res.send(categories)
 });
 
+app.get("/news", (req, res) => {
+    res.send(news)
+})
+
 
 app.listen(port, () => {
-    console.log(`Dragon News 4 is running on Port:${port}`)
+    console.log(`Dragon News 5 is running on Port:${port}`)
 });
